@@ -1,60 +1,174 @@
+/* ========================= */
+/* RESET */
+/* ========================= */
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: black;
+  color: white;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* FOND DEMON SLAYER */
-.demon-bg {
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 40px;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+
+  border-bottom: 1px solid transparent;
+
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  color: #ff1a1a;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px red;
+}
+
+/* MENU */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+/* ITEMS */
+.navbar li {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* ========================= */
+/* ⚔️ AURA AU HOVER */
+/* ========================= */
+
+.navbar li:hover {
+  color: #ff1a1a;
+  text-shadow:
+    0 0 8px red,
+    0 0 18px red,
+    0 0 35px darkred;
+  transform: scale(1.15);
+}
+
+/* Aura rouge derrière */
+.navbar li::before {
+  content: "";
+  position: absolute;
+  inset: -8px -12px;
+  background: radial-gradient(circle, rgba(255,0,0,0.35), transparent 70%);
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.navbar li:hover::before {
+  opacity: 1;
+}
+
+/* ========================= */
+/* 🔥 SOULIGNEMENT QUI GLISSE */
+/* ========================= */
+
+.navbar li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 0%;
+  background: red;
+  transition: 0.3s;
+  box-shadow: 0 0 8px red;
+}
+
+.navbar li:hover::after {
+  width: 100%;
+}
+
+/* ========================= */
+/* 👹 MODE DEMON AU SCROLL */
+/* ========================= */
+
+.navbar.demon {
+  background: rgba(20, 0, 0, 0.95);
+  border-bottom: 2px solid red;
+  box-shadow: 0 0 25px red;
+}
+
+/* Effet aura globale */
+.navbar.demon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,0,0,0.25), transparent 70%);
+  opacity: 0.6;
+  animation: pulse 3s infinite;
+  z-index: -1;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+.section {
   height: 100vh;
-  background: radial-gradient(circle at center, #8b0000 0%, #1a0000 40%, #000 80%);
+  padding-top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+  font-size: 4rem;
+  text-align: center;
 }
 
-/* Aura rouge animée */
-.demon-bg::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,0,0,0.4) 0%, transparent 60%);
-  animation: pulse 6s infinite ease-in-out;
+/* HOME DEMON SLAYER */
+.home {
+  background: radial-gradient(circle at center, #8b0000, #000);
 }
 
-/* Particules démoniaques */
-.demon-bg::after {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(red 1px, transparent 1px);
-  background-size: 35px 35px;
-  opacity: 0.15;
-  animation: move 20s linear infinite;
+/* AUTRES */
+.reseaux {
+  background: radial-gradient(circle, #2a0000, #000);
 }
+
+.carriere {
+  background: radial-gradient(circle, #1a0000, #000);
+}
+
+/* ========================= */
+/* ANIMATION AURA */
+/* ========================= */
 
 @keyframes pulse {
-  0%   { transform: scale(1); opacity: 0.4; }
-  50%  { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 0.4; }
-}
-
-@keyframes move {
-  from { transform: translate(0,0); }
-  to { transform: translate(-200px, -200px); }
-}
-
-/* Texte style démon */
-.title {
-  font-size: 5rem;
-  color: #ff1a1a;
-  text-shadow:
-    0 0 10px red,
-    0 0 30px red,
-    0 0 60px darkred;
-  z-index: 1;
+  0%   { transform: scale(1); opacity: 0.5; }
+  50%  { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.5; }
 }
