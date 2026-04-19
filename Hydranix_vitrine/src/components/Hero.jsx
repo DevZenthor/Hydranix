@@ -19,7 +19,7 @@ export default function Hero() {
       {/* Team + Manager sur la même ligne */}
       <div className="hero-infos">
         <a
-          href="https://twitter.com/"
+          href="https://x.com/RealityZoned"
           target="_blank"
           rel="noreferrer"
           className="hero-link"
@@ -29,7 +29,7 @@ export default function Hero() {
         </a>
 
         <a
-          href="https://twitter.com/"
+          href="https://x.com/zenthor1480"
           target="_blank"
           rel="noreferrer"
           className="hero-link"
