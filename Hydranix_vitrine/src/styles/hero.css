@@ -1,0 +1,99 @@
+/* src/styles/hero.css */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-profile {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 28px;
+
+  /* GLOW */
+  box-shadow:
+    0 0 8px rgba(255, 0, 0, 0.7),
+    0 0 18px rgba(255, 0, 0, 0.6),
+    0 0 35px rgba(255, 0, 0, 0.45),
+    0 0 60px rgba(255, 0, 0, 0.25);
+
+  transition: 0.3s ease;
+}
+
+.hero-profile:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 12px rgba(255, 0, 0, 0.9),
+    0 0 25px rgba(255, 0, 0, 0.8),
+    0 0 45px rgba(255, 0, 0, 0.6),
+    0 0 80px rgba(255, 0, 0, 0.35);
+}
+
+.hero-title {
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: white;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.12);
+}
+
+/* Team + Manager */
+.hero-infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.hero-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.hero-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.hero-link img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-link span {
+  color: #ff1e1e;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-profile {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-infos {
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .hero-link span {
+    font-size: 14px;
+  }
+}

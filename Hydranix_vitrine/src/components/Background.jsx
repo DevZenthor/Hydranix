@@ -1,6 +1,4 @@
-// src/components/Background.jsx
 import { useEffect } from "react";
-import "../styles/background.css";
 
 export default function Background() {
   useEffect(() => {

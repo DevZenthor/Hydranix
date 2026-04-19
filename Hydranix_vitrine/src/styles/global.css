@@ -1,0 +1,73 @@
+/* src/styles/global.css */
+
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+  --primary-color: #ff1e1e;
+  --secondary-color: #ffffff;
+  --background-color: #000000;
+  --text-muted: #9a9a9a;
+
+  --font-main: "Bangers", cursive;
+  --font-secondary: "Rajdhani", sans-serif;
+}
+
+/* =========================
+   IMPORT FONT MANGA
+========================= */
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@400;600;700&display=swap");
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE
+========================= */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: var(--background-color);
+  color: var(--secondary-color);
+  font-family: var(--font-secondary);
+  overflow-x: hidden;
+}
+
+/* =========================
+   TITRES STYLE MANGA
+========================= */
+h1,
+h2,
+h3,
+.logo,
+.title {
+  font-family: var(--font-main);
+  letter-spacing: 2px;
+}
+
+/* =========================
+   CLASSES UTILES
+========================= */
+.text-primary-custom {
+  color: var(--primary-color);
+}
+
+.text-secondary-custom {
+  color: var(--secondary-color);
+}
+
+.bg-primary-custom {
+  background: var(--primary-color);
+}
+
+.bg-dark-custom {
+  background: var(--background-color);
+}
