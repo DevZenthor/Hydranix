@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useEffect } from "react";
 import Background from "./components/Background";
 import Hero from "./components/Hero";

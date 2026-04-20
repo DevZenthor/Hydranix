@@ -1,4 +1,3 @@
-// src/components/Socials.jsx
 import { FaXTwitter, FaTwitch } from "react-icons/fa6";
 import { HiChartBar } from "react-icons/hi2";
 
