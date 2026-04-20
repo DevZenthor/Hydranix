@@ -9,14 +9,15 @@
   --background-color: #000000;
   --text-muted: #9a9a9a;
 
-  --font-main: "Bangers", cursive;
-  --font-secondary: "Rajdhani", sans-serif;
+  /* Police pro / moderne */
+  --font-main: "Sora", sans-serif;
+  --font-secondary: "Inter", sans-serif;
 }
 
 /* =========================
-   IMPORT FONT MANGA
+   IMPORT FONTS PRO
 ========================= */
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
 
 /* =========================
    RESET
@@ -42,7 +43,7 @@ body,
 }
 
 /* =========================
-   TITRES STYLE MANGA
+   TITRES
 ========================= */
 h1,
 h2,
@@ -50,7 +51,19 @@ h3,
 .logo,
 .title {
   font-family: var(--font-main);
-  letter-spacing: 2px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+/* =========================
+   TEXTE PARAGRAPHE / UI
+========================= */
+p,
+span,
+a,
+button,
+input {
+  font-family: var(--font-secondary);
 }
 
 /* =========================
@@ -70,4 +83,33 @@ h3,
 
 .bg-dark-custom {
   background: var(--background-color);
+}
+
+/* ajoute dans global.css */
+
+/* Empêche sélection du texte */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+/* Cache le curseur texte (I-beam) */
+body,
+a,
+button,
+span,
+p,
+h1,
+h2,
+h3,
+img,
+div {
+  cursor: default;
+}
+
+/* Curseur pointer sur éléments cliquables */
+a,
+button {
+  cursor: pointer;
 }
